@@ -32,18 +32,7 @@ a {
   text-decoration: none;
 }
 
-.global-header a.logo,
-.info-footer a.logo {
-  font-family: var(--logo-font);
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: 0.78px;
-}
-.global-header .logo span,
-.info-footer .logo span,
-.global-header .active-link {
-  color: var(--link-color);
-}
+
 
 .global-header {
   color: var(--titles-color);
@@ -54,6 +43,36 @@ a {
   line-height: normal;
   letter-spacing: 0.28px;
   display: flex;
+}
+
+.info-footer .logo-web,
+.logo-header .logo-web{
+  color: #2196F3;
+font-family: var(--logo-font);
+font-size: 26px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 0.78px;
+}
+.logo-header .logo-studio{
+  color: #000;
+font-family: var(--logo-font);
+font-size: 26px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 0.78px;
+}
+
+.info-footer .logo-studio{
+  color: #FFF;
+font-family: var(--logo-font);
+font-size: 26px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 0.78px;
 }
 
 h1,
@@ -79,14 +98,25 @@ ul {
   letter-spacing: 0.28px;
 }
 
+.link-one .active, 
+.link-two .active, 
+.link-three .not-active{
+color: #212121; 
+font-family: var(--titles-color);
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 0.28px;
+}
 .button {
   background: #fff;
 }
 
 .hero-section {
-  background-image: url("./images/main-background.png"), lightgray 0px -147.517px / 100% 170.667% no-repeat;
-  width: 1600px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),  url("../images/main-background.png") ;
   height: 600px;
+  background-color:  rgba(47, 48, 58, 0.40);;
 }
 .hero-heading {
   color: #fff;
@@ -200,9 +230,8 @@ ul {
 .email:focus,
 .phone-number:focus,
 .contact-details:focus,
-.contact-details:hover,
-svg:hover,
-svg:focus {
+.contact-details:hover
+ {
   color: var(--link-color);
 }
 
@@ -224,7 +253,7 @@ svg:focus {
   line-height: normal;
   letter-spacing: 0.42px;
   display: flex;
-  gap: 10px;
+  gap: 12px;
   flex-direction: column;
 }
 
@@ -343,12 +372,11 @@ svg:focus {
 .button-container {
   display: flex;
   box-sizing: content-box;
-  width: 331px;
   height: 38px;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
   gap: 8px;
 }
 .button-one,
@@ -357,76 +385,29 @@ svg:focus {
 .button-four,
 .button-five {
   border: 0;
-}
-.button-one {
   box-sizing: content-box;
-  width: 20px;
-  border-radius: 4px;
-  background-color: #2196f3;
-  cursor: pointer;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 26px;
-  padding: 6px 22px;
-}
-.button-two {
-  box-sizing: content-box;
-  width: 76px;
   border-radius: 4px;
   background-color: #f5f4fa;
   cursor: pointer;
   text-align: center;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 26px;
-  padding: 6px 22px;
-}
-.button-three {
-  box-sizing: content-box;
-  width: 39px;
-  border-radius: 4px;
-  background-color: #f5f4fa;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 26px;
-  padding: 6px 22px;
-}
-.button-four {
-  box-sizing: content-box;
-  width: 52px;
-  border-radius: 4px;
-  background-color: #f5f4fa;
-  cursor: pointer;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 26px;
-  padding: 6px 22px;
-}
-.button-five {
-  box-sizing: content-box;
-  width: 77px;
-  border-radius: 4px;
-  background-color: #f5f4fa;
-  cursor: pointer;
-  text-align: center;
+  font-family: var(--text-font-family);
   font-size: 16px;
   font-weight: 500;
   line-height: 26px;
   padding: 6px 22px;
 }
 
+
 .content-container {
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 30px;
+  row-gap: 30px;
   flex-wrap: wrap;
   box-sizing: content-box;
   width: 1176px;
-  margin-top: 50px;
+  
 }
 .image-container {
   display: flex;
@@ -589,7 +570,7 @@ svg:focus {
   margin-top: 94px;
 }
 .info-image {
-  display: inline-block;
+  
   list-style: none;
   display: flex;
   justify-content: center;
@@ -597,12 +578,13 @@ svg:focus {
   gap: 30px;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 94px;
 }
 .our-team {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 648px;
+  padding-bottom: 94px;
   background-color: #f5f4fa;
 }
 .info-team {
@@ -659,11 +641,21 @@ svg:focus {
   padding-bottom: 20px;
 }
 
+.content-container li:hover,
+.content-container li:focus{
+  border: 1px solid #EEE;
+  background: #FFF;
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+}
+
 .icons-list {
   display: flex;
   margin-top: 16px;
   gap: 10px;
+  
 }
+
+
 .icons-list .icon {
   width: 44px;
   height: 44px;
@@ -675,10 +667,8 @@ svg:focus {
   color: #afb1b8;
 }
 
-.icons-list .icon:hover,
-.icons-list .icon:focus {
-  color: var(--background-color);
-}
+
+
 .icons-list .icon svg {
   width: 20px;
   height: 20px;
@@ -698,7 +688,7 @@ svg:focus {
   letter-spacing: 0.42px;
   text-transform: uppercase;
   padding-bottom: 32px;
-  padding-top: 70px;
+  
 }
 .social-links-icon {
   display: flex;
@@ -706,15 +696,37 @@ svg:focus {
   flex-direction: column;
   justify-content: center;
 }
-.find-us-links .icon {
+
+.icons-list .icon {
   width: 44px;
   height: 44px;
-  background-color: #ffffff1a;
+  background-color: #fffffff0;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 22px;
+  cursor: pointer;
   
+}
+.find-us-links .icon{
+  width: 44px;
+  height: 44px;
+  background-color: #48494f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+  cursor: pointer;
+}
+
+
+
+.find-us-links .icon:hover,
+.find-us-links .icon:focus,
+.icons-list .icon:hover,
+.icons-list .icon:focus {
+  color: white;
+  background-color: var(--background-color);
 }
 .find-us-links {
   display: flex;
@@ -725,10 +737,14 @@ svg:focus {
   width: 16px;
   height: 11.996px;
 }
+
 .navigation-contacts svg:focus,
-.navigation-contacts svg:hover {
+.navigation-contacts svg:hover, 
+.icon-logo-customers .icon-logo:hover,
+.icon-logo-customers .icon-logo:focus {
   color: #2196f3;
 }
+
 .first-section li svg {
   width: 70px;
   height: 70px;
@@ -758,10 +774,14 @@ svg:focus {
   padding-bottom: 50px;
 }
 
-.icon-logos svg {
+.icon-logos svg, .icon-logos {
   width: 106px;
   height: 60px;
   flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 .icon-logos .icon-logo-customers {
   display: flex;
@@ -776,20 +796,6 @@ svg:focus {
   gap: 30px;
 }
 
-.icon-logo:hover,
-.icon-logo:focus,
-.icon-social:hover,
-.icon-social:focus{
-  color: var(--link-color);
-  
-}
-
-.icon-logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
 
 .regular-customer-section {
   display: flex;
@@ -801,13 +807,15 @@ svg:focus {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.navigation-contacts svg, .our-team svg, .regular-customer-section svg{
+.regular-customer-section svg{
   color:  var(--icons-color);
 }
 
 .content-container li{
   border: 1px solid #EEE;
 background: #FFF;
+}
 
-
+.find-us-links .icon use{
+  color: white;
 }
