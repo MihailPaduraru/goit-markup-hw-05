@@ -218,18 +218,9 @@ ul {
   letter-spacing: 1.08px;
 }
 
-.link-one .active {
-  text-decoration: none;
-  padding-bottom: 20px;
-}
-
 .active:hover {
   color: var(--link-color);
-  text-decoration: underline;
-  text-decoration-color: var(--link-color);
-  text-decoration-thickness: 4px;
-  text-underline-offset: 28px;
-  border-radius: 2px;
+  transition: var(--transition);
 }
 
 .email:hover,
@@ -240,6 +231,7 @@ ul {
 .contact-details:focus,
 .contact-details:hover {
   color: var(--link-color);
+  transition: var(--transition);
 }
 
 .button-container .button:hover,
@@ -638,7 +630,7 @@ ul {
   flex-direction: column;
 }
 
-.image-card .job-title {
+.image-job-title .job-title {
   display: flex;
   padding-left: 24px;
   padding-bottom: 20px;
@@ -815,6 +807,9 @@ ul {
 .content-container li {
   border: 1px solid #eee;
   background: #fff;
+  width: 370px;
+  height: 404px;
+  flex-shrink: 0;
 }
 
 .find-us-links .icon use {
@@ -873,4 +868,77 @@ ul {
   height: 18px;
   flex-shrink: 0;
   color: rgba(0, 0, 0, 1);
+}
+
+.overlay-text {
+  background-color: grey;
+  position: absolute;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+  flex-shrink: 0;
+  background: rgba(47, 48, 58, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay-text h4 {
+  color: #fff;
+  text-align: center;
+  font-family: var(--text-font-family);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+}
+.info-image-one,
+.info-image-two,
+.info-image-three {
+  position: relative;
+  width: 370px;
+  height: 294px;
+}
+.image-card {
+  position: relative;
+  width: 370px;
+  height: 294px;
+  flex-shrink: 0;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0px;
+  flex-shrink: 0;
+  background: rgba(33, 150, 243, 0.9);
+  transition: height 0.5s ease;
+}
+.image-job-title {
+  height: 110px;
+}
+.image-card:hover .overlay {
+  height: 294px;
+}
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -28px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #007bff;
+  transition: var(--transition);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 2px;
+}
+.nav-links a.active::after {
+  opacity: 1;
 }
