@@ -776,6 +776,7 @@ ul {
   justify-content: center;
   align-items: center;
   gap: 30px;
+  transform: transition var(--transition);
 }
 .icon-logos .icon-logo-customers {
   display: flex;
@@ -788,6 +789,7 @@ ul {
   border-radius: 4px;
   border: 1px solid #afb1b8;
   gap: 30px;
+  transform: transition var(--transition);
 }
 
 .regular-customer-section {
@@ -825,6 +827,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 3000ms linear;
 }
 
 .modal-content {
@@ -839,10 +842,15 @@ ul {
   background: #fff;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  transform: scale(1);
+  transition: 3000ms linear;
 }
 
 .is-hidden {
   visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: 2500ms linear;
 }
 
 .close-btn {
@@ -918,7 +926,7 @@ ul {
 .image-job-title {
   height: 110px;
 }
-.image-card:hover .overlay {
+.hover-image-card:hover .overlay {
   height: 294px;
 }
 
@@ -926,7 +934,7 @@ ul {
   position: relative;
   text-decoration: none;
 }
-.nav-links a::after {
+.nav-links a.active:hover::after {
   content: "";
   position: absolute;
   bottom: -28px;
@@ -935,10 +943,6 @@ ul {
   height: 4px;
   background-color: #007bff;
   transition: var(--transition);
-  opacity: 0;
   transition: opacity 0.3s ease;
   border-radius: 2px;
-}
-.nav-links a.active::after {
-  opacity: 1;
 }
